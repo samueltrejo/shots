@@ -1,0 +1,9 @@
+#locations {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  
+  .w-15 {
+    width: 15%;
+  }
+}
