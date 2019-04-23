@@ -13,14 +13,9 @@ const searchFilter = (event) => {
 
 const filterLocations = (criteria) => {
   const locations = data.getLocations();
-  const tempArray = [];
   if (criteria !== 'All') {
-    locations.forEach((location) => {
-      if (location.shootTime === criteria) {
-        tempArray.push(location);
-      }
-    });
-    data.domStringBuilder(tempArray);
+    const filteredArray = locations.filter(x => x.shootTime === criteria);
+    data.domStringBuilder(filteredArray);
   } else {
     data.domStringBuilder(locations);
   }
