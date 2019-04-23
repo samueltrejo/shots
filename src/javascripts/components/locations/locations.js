@@ -5,6 +5,8 @@ import './locations.scss';
 
 let locations = [];
 
+const getLocations = () => locations;
+
 const shootTimeClass = (shootTime) => {
   let selectedClass = '';
   switch (shootTime) {
@@ -27,9 +29,9 @@ const shootTimeClass = (shootTime) => {
   return selectedClass;
 };
 
-const domStringBuilder = () => {
+const domStringBuilder = (array) => {
   let domString = '';
-  locations.forEach((location) => {
+  array.forEach((location) => {
     domString += `<div id="${location.id}" class="card text-center w-15 m-3">`;
     domString += `<div class="card-header ${shootTimeClass(location.shootTime)}">${location.name}</div>`;
     domString += '<div class="card-body">';
@@ -46,9 +48,9 @@ const initializeLocations = () => {
     .then((response) => {
       const movieResults = response.data.locations;
       locations = movieResults;
-      domStringBuilder();
+      domStringBuilder(locations);
     })
     .catch(err => console.error(err));
 };
 
-export default { initializeLocations };
+export default { initializeLocations, getLocations, domStringBuilder };
