@@ -1,5 +1,16 @@
 import data from './locations';
 
+const searchFilter = (event) => {
+  const locations = data.getLocations();
+  const searchText = event.target.value;
+  const searchLocations = locations.filter((x) => {
+    const hasName = x.name.includes(searchText);
+    const hasAddress = x.address.includes(searchText);
+    return hasName || hasAddress;
+  });
+  data.domStringBuilder(searchLocations);
+};
+
 const filterLocations = (criteria) => {
   const locations = data.getLocations();
   const tempArray = [];
@@ -22,6 +33,7 @@ const filterCriteria = (event) => {
 
 const attachButtonEvents = () => {
   document.getElementById('filters').addEventListener('click', filterCriteria);
+  document.getElementById('search').addEventListener('keyup', searchFilter);
 };
 
 export default { attachButtonEvents };
