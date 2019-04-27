@@ -5,6 +5,8 @@ import './movies.scss';
 
 let movies = [];
 
+const getMovies = () => movies;
+
 const domStringBuilder = () => {
   let domString = '';
   movies.forEach((movie) => {
@@ -31,4 +33,4 @@ const initializeMovies = () => {
     .catch(err => console.error(err));
 };
 
-export default { initializeMovies };
+export default { initializeMovies, getMovies };

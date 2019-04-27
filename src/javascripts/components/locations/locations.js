@@ -50,7 +50,7 @@ const initializeLocations = () => {
       locations = movieResults;
       domStringBuilder(locations);
     })
-    .catch(err => console.error(err));
+    .catch(error => console.error(error));
 };
 
 export default { initializeLocations, getLocations, domStringBuilder };
