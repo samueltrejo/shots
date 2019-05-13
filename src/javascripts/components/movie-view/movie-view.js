@@ -4,8 +4,7 @@ import locationData from '../locations/locations';
 import './movie-view.scss';
 
 const movieViewBuilder = (event) => {
-  console.error(movieData.getMovies());
-  console.error(locationData.getLocations());
+  console.error(event.)
   console.error(event.target.id);
 };
 
