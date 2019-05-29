@@ -53,4 +53,9 @@ const initializeLocations = () => {
     .catch(error => console.error(error));
 };
 
-export default { initializeLocations, getLocations, domStringBuilder };
+export default {
+  initializeLocations,
+  getLocations,
+  domStringBuilder,
+  shootTimeClass,
+};

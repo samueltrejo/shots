@@ -10,7 +10,7 @@ const getMovies = () => movies;
 const domStringBuilder = () => {
   let domString = '';
   movies.forEach((movie) => {
-    domString += `<div id="${movie.id}" class="card text-center w-25 m-3">`;
+    domString += `<div id="${movie.id}" class="movie card text-center w-25 m-3">`;
     domString += `<div class="card-header">${movie.name}</div>`;
     domString += '<div class="card-body">';
     domString += `<h5 class="card-title">${movie.genre}</h5>`;
