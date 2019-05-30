@@ -1,7 +1,7 @@
 # Shots
 A web app that keeps track of movies and locations they were shot in. Filter locations by shoot time, name, and address.
 
-![image of shots app]()
+![image of shots app](https://raw.githubusercontent.com/samueltrejo/shots/master/img/readme-screenshot.PNG)
 
 ## Technologies Used
 * html, scss and javascript
